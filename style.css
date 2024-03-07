@@ -97,10 +97,31 @@ a.active, a:hover{
     }
 }
 
+/*About Me Section styling */
+
 section.about-me{
     margin: 1rem 15rem; 
 }
 
-section.about-me p{
+section p{
     margin-top: 1rem;
+}
+
+/*Skills section styling */
+
+section.skills{
+    padding: 1rem 15rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #CADCFC;
+}
+
+section.skills h2{
+    margin-bottom: 1rem;
+}
+
+section.skills .icons{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
