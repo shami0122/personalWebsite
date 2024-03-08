@@ -3,13 +3,14 @@ html{
     font-size: 16px;
 }
 
-*{
+body{
     font-family: "Poppins", sans-serif;
-    padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing:border-box;
+    padding-top: 6rem;
+
 }
 
 nav{
@@ -17,6 +18,9 @@ nav{
     background-color:  #00246B;
     height: 6rem;
     width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
 }
 
 label.logo{
@@ -36,7 +40,7 @@ nav ul{
 
 nav ul li{
     display: inline-block;
-    line-height: 6rem;
+    line-height: 4rem;
     margin: 0 2rem;
 }
 
@@ -99,7 +103,7 @@ a.active, a:hover{
 
 /*About Me Section styling */
 
-section.about-me{
+section.about-me, section.projects{
     margin: 1rem 15rem; 
 }
 
@@ -108,7 +112,6 @@ section p{
 }
 
 /*Skills section styling */
-
 section.skills{
     padding: 1rem 15rem;
     margin-top: 2rem;
@@ -124,4 +127,19 @@ section.skills .icons{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+/*Projects section styling*/
+section.projects h3{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+section.projects li{
+    margin-bottom:0.5rem;
+}
+
+section.projects li li{
+    list-style-type: circle;
+    margin-left: 2rem;
 }
