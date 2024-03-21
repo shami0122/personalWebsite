@@ -3,6 +3,10 @@ html{
     font-size: 16px;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -79,6 +83,10 @@ a.active, a:hover{
 }
 
 @media (max-width: 858px){
+    #check:checked {
+        overflow: hidden; /* This hides the scrollbar on the background screen */
+    }
+    
     .checkbtn{
         display: block;
     }
@@ -88,11 +96,10 @@ a.active, a:hover{
         height: 100vh;
         background: #2c3e50;
         top: 4.9rem;
-        left: -105%;
+        left: -100%;
+        transform: translateX(-5%);
         text-align: center;
         transition: all .5s;
-        overflow: hidden;
-    
     }
     nav ul li{
         display: block;
@@ -110,6 +117,44 @@ a.active, a:hover{
     }
     #check:checked ~ul{
         left: 0%;
+    }
+}
+
+/* Home section styling and animation*/
+section.Home{
+    display: flex;
+    background: url(./images/img1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 6rem);
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    
+}
+
+section.Home h1 {
+    white-space: nowrap;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation: typing 2s steps(50, end) forwards, blink 0.01s;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width:15%;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        border-right: 2px solid transparent;
+    }
+    50% {
+        border-right: 2px solid #222;
     }
 }
 
@@ -145,6 +190,12 @@ section.skills .icons{
 section.projects h3{
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+section.projects h3:hover{
+    text-decoration: none;
 }
 
 section.projects li{
@@ -155,3 +206,71 @@ section.projects li li{
     list-style-type: circle;
     margin-left: 2rem;
 }
+
+/* Contact Page */
+.contact-container{
+    height: calc(100vh - 6rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #CADCFC;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container h2{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500px;
+    border-radius: 50px;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 2px solid #3662b9 ;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#6ba0ff, #3662b9);
+    cursor: pointer;
+}
+
+.other-links a{
+    color: black;
+}
+
+.other-links a:hover{
+    transition: none;
+    background: none;
+    color: blueviolet;
+    text-decoration: none;
+}
+
