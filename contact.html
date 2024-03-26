@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shami Sharma | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Prompt:wght@300;400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2195e6fd1a.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <label class="logo">Shami Sharma</label>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul class="navbar">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="https://www.linkedin.com/in/shami-sharma/" target="_blank">LinkedIn</a></li>
-          <li><a href='#'>Contact Me</a></li>
-        </ul>
-      </nav>     
-    </header>
-    <div class="contact-container">
-        <form action="" class = "contact-left">
-            <div class="contact-left-title">
-                <h2>Contact Me</h2>
-                <hr>
-            </div>
-            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-            <input type="email" name="email" placeholder="Your E-mail" class="contact-inputs" required>
-            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-        <div class="other-links">
-            <h2>Other Links</h2>
-            <hr>
-            <a href="https://github.com/shami0122" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
-        </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shami Sharma | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Prompt:wght@300;400&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2195e6fd1a.js" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "RFMU7jBntAZkPS8lf",
+      });
+   })();
+</script>
+  <script src="./email.js"> </script>
+</head>
+
+<body style="background-color:#CADCFC;">
+  <header>
+    <nav>
+      <label class="logo">Shami Sharma</label>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://www.linkedin.com/in/shami-sharma/" target="_blank">LinkedIn</a></li>
+        <li><a class="active" href='#'>Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="contact-container">
+    <form id="contact-form" action="" class="contact-left">
+      <div class="contact-left-title">
+        <h2>Contact Me</h2>
+        <hr>
+      </div>
+      <input id="name" type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+      <input id="email" type="email" name="email" placeholder="Your E-mail" class="contact-inputs" required>
+      <input id="subject" type="text" name="subject" placeholder="Subject" class="contact-inputs" required>
+      <textarea id="message" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+      <button type="submit" onclick="sendMail(); return false;">Submit</button>
+    </form>
+    <div class="other-links">
+      <h2>Other Links</h2>
+      <hr>
+      <a href="https://github.com/shami0122" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

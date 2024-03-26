@@ -213,7 +213,7 @@ section.projects li li{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #CADCFC;
+    flex-wrap: wrap;
 }
 
 .contact-left{
@@ -261,6 +261,11 @@ section.projects li li{
     border-radius: 50px;
     background: linear-gradient(270deg,#6ba0ff, #3662b9);
     cursor: pointer;
+}
+
+.other-links{
+    padding-bottom: 100px;
+    margin: 30px;
 }
 
 .other-links a{
