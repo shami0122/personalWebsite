@@ -256,11 +256,16 @@ section.projects li li{
     align-items: center;
     padding: 15px 30px;
     font-size: 16px;
+    font-weight: bold;
     gap: 10px;
     border: none;
     border-radius: 50px;
     background: linear-gradient(270deg,#6ba0ff, #3662b9);
     cursor: pointer;
+}
+
+.contact-left button:hover{
+    color: white;
 }
 
 .other-links{

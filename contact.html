@@ -38,16 +38,16 @@
     </nav>
   </header>
   <div class="contact-container">
-    <form id="contact-form" action="" class="contact-left">
+    <form action="" class="contact-left" id="contact-form" >
       <div class="contact-left-title">
         <h2>Contact Me</h2>
         <hr>
       </div>
-      <input id="name" type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-      <input id="email" type="email" name="email" placeholder="Your E-mail" class="contact-inputs" required>
-      <input id="subject" type="text" name="subject" placeholder="Subject" class="contact-inputs" required>
-      <textarea id="message" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-      <button type="submit" onclick="sendMail(); return false;">Submit</button>
+      <input id="name" type="text" name="name" placeholder="Your Name" class="contact-inputs" >
+      <input id="email" type="email" name="email" placeholder="Your E-mail" class="contact-inputs">
+      <input id="subject" type="text" name="subject" placeholder="Subject" class="contact-inputs">
+      <textarea id="message" name="message" placeholder="Your Message" class="contact-inputs"></textarea>
+      <button type="submit" id="submit-btn" onclick="return validateForm()">Submit</button>
     </form>
     <div class="other-links">
       <h2>Other Links</h2>
