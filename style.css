@@ -72,6 +72,15 @@ a.active, a:hover{
     display: none;
 }
 
+@media(max-width: 1700px){
+    section.Home h1 {
+        white-space: nowrap; /* Preventing text from wrapping */
+        overflow: hidden; /* Hide the overflowing text */
+        text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+        animation: typing 2s steps(50, end) forwards, blink 0.01s; /* Animation for typing effect */
+    }
+}
+
 @media (max-width: 1300px){
     label.logo{
         font-size: 1.7rem;
@@ -80,6 +89,7 @@ a.active, a:hover{
     nav ul li a{
         font-size: 1rem;
     }
+  
 }
 
 @media (max-width: 858px){
@@ -92,11 +102,11 @@ a.active, a:hover{
     }
     .navbar{
         position: fixed;
-        width: 100%;
+        width: 106%;
         height: 100vh;
         background: #2c3e50;
         top: 4.9rem;
-        left: -100%;
+        left: -105%;
         transform: translateX(-5%);
         text-align: center;
         transition: all .5s;
@@ -118,6 +128,7 @@ a.active, a:hover{
     #check:checked ~ul{
         left: 0%;
     }
+
 }
 
 /* Home section styling and animation*/
